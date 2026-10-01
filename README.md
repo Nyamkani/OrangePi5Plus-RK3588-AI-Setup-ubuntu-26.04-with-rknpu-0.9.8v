@@ -4,6 +4,10 @@
 > Orange Pi 5 Plus (RK3588, 32 GB)에서 Joshua-Riek Ubuntu Rockchip BSP를 기반으로 userspace를 Ubuntu 26.04.1 LTS로 올리고, 기존 Rockchip BSP kernel 계열을 유지하면서 RKNPU kernel driver를 0.9.7 → 0.9.8로 업데이트한 실제 작업 기록입니다.  
 > This repository documents the actual setup used to upgrade the userspace to Ubuntu 26.04.1 LTS while preserving the Joshua-Riek Rockchip BSP kernel family, and to update the built-in RKNPU kernel driver from 0.9.7 to 0.9.8 on an Orange Pi 5 Plus.
 
+> **Note / 참고**  
+> Ubuntu 26.04 is the validated userspace environment used in this setup, but it is not a technical requirement for the RKNPU 0.9.8 backport itself.  
+> Ubuntu 26.04는 이 구성에서 실제로 검증한 userspace 환경이지만, RKNPU 0.9.8 backport 자체의 기술적 필수 조건은 아닙니다.
+
 ## Final verified environment / 최종 검증 환경
 
 | Item | Verified value |
