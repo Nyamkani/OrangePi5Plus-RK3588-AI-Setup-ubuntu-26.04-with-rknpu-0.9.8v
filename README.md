@@ -27,6 +27,28 @@
 | DDR freq under load | 2.112 GHz |
 | Observed max temperature | ~49 °C |
 
+## RKLLM actual measurement / 실제 구동 측정
+
+RKLLM Runtime 1.3.1 + RKNPU 0.9.8 환경에서 Gemma 4 E2B-it W8A8 모델을 실제 실행한 측정 화면입니다.  
+Actual Gemma 4 E2B-it W8A8 inference measurements using RKLLM Runtime 1.3.1 + RKNPU 0.9.8.
+
+![RKLLM Gemma 4 inference, NPU load and htop](docs/images/rkllm-gemma4-htop-npu-load.webp)
+
+- NPU Core0/Core1/Core2: about **69% / 69% / 69%**
+- Generate: **511 tokens / 8.21 tokens/s**
+- Peak RKLLM memory: **3029.53 MB**
+- CPU load is mainly concentrated on cores 4–7.
+
+![RKLLM NPU frequency, DDR frequency and thermal](docs/images/rkllm-gemma4-npu-ddr-thermal.webp)
+
+- NPU frequency: **1.0 GHz**
+- DDR frequency: **2.112 GHz**
+- SoC: **44.4 °C**
+- Big cores: **45.3 °C**
+- NPU: **43.5 °C**
+
+See [docs/07_RKLLM_GEMMA4_TEST.md](docs/07_RKLLM_GEMMA4_TEST.md) for the detailed test notes.
+
 ## Critical design rule / 핵심 원칙
 
 **Do not install RKNPU 0.9.8 as an external DKMS module on this kernel.**  
