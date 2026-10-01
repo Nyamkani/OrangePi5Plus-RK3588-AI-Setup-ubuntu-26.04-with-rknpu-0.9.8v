@@ -1,0 +1,5 @@
+--- a/tools/lib/bpf/libbpf.c
++++ b/tools/lib/bpf/libbpf.c
+@@
+-		char *next_path;
++		const char *next_path;
